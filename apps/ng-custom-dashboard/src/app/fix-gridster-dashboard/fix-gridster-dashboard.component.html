@@ -1,0 +1,13 @@
+<gridster [options]="options">
+  <gridster-item [item]="item" *ngFor="let item of dashboard">
+    <div class="button-holder">
+      <button mat-mini-fab (click)="addComponent(item, comp.container)">
+        <mat-icon>add</mat-icon>
+      </button>
+      <ng-template
+        customDashboardComponentContainer
+        #comp="componentContainer"
+      ></ng-template>
+    </div>
+  </gridster-item>
+</gridster>

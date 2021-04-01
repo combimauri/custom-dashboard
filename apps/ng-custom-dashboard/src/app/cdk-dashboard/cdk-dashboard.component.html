@@ -1,0 +1,16 @@
+<!-- Pass the component class as an argument to add and remove based on the component class -->
+<button mat-button color="primary" (click)="addComponent(CardComponent)">
+  Add Widget 1
+</button>
+<button mat-button color="primary" (click)="addComponent(CardTwoComponent)">
+  Add Widget 2
+</button>
+
+<div
+  class="real-container"
+  cdkDropList
+  cdkDropListOrientation="horizontal"
+  (cdkDropListDropped)="drop($event)"
+>
+  <ng-container #container></ng-container>
+</div>
